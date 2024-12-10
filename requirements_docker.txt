@@ -1,7 +1,0 @@
-pandas
-cupy-cuda12x
-cucim
-monai[itk,ignite,nibabel]>=1.2.0
-pynvml
-SimpleITK
-scipy
