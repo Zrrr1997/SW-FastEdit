@@ -710,8 +710,8 @@ def get_trainer(
             save_dict = {
                 "trainer": trainer,
                 "net": network,
-                "opt": optimizer,
-                "lr": lr_scheduler,
+                #"opt": optimizer,
+                #"lr": lr_scheduler,
             }
     else:
         save_dict = {
@@ -765,6 +765,7 @@ def get_trainer(
         logger.info(f"{save_dict.keys()=}")
         map_location = device  # {f"cuda:{args.gpu}": f"cuda:{args.gpu}"}
         checkpoint = torch.load(resume_from)
+        
 
         for key in save_dict:
             # If it fails: the file may be broken or incompatible (e.g. evaluator has not been run)
